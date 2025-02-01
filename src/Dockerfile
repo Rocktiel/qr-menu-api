@@ -1,10 +1,13 @@
 FROM node:18-alpine
 
-WORKDIR /
+WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install
+RUN rm -rf node_modules && \
+    rm -f package-lock.json && \
+    npm cache clean --force && \
+    npm install
 
 COPY . .
 
