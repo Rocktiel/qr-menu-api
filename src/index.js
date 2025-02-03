@@ -9,7 +9,7 @@ const app = express();
 // CORS ayarları
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL || "http://localhost:3000",
+    origin: 'https://qr-menu-api-2.onrender.com',
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
