@@ -87,7 +87,7 @@ module.exports = (sequelize) => {
     {
       sequelize,
       modelName: "Order",
-      tableName: "orders",
+      tableName: "Orders",
     }
   );
 
