@@ -42,10 +42,10 @@ const PORT = process.env.PORT || 3001;
 
 const startServer = async () => {
   try {
-    // await sequelize.sync({ force: true });
+    await sequelize.sync({ force: true });
     // console.log("Veritabanı başarıyla senkronize edildi.");
 
-    // await createAdmin();
+    await createAdmin();
 
     app.listen(PORT, () => {
       console.log(`Sunucu ${PORT} portunda çalışıyor`);
